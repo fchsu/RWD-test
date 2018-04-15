@@ -1,0 +1,902 @@
+/*css reset*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*自訂css reset*/
+img{
+	max-width: 100%;
+	height: auto;
+}
+a{
+	text-decoration: none;
+}
+*, *:before, *:after{
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+input, button{
+	outline: none;
+}
+
+/*pure css-button*/
+/*csslint outline-none:false*/
+
+.pure-button {
+    font-family: inherit;
+    font-size: 100%;
+    padding: 0.5em 1em;
+    color: #444; /* rgba not supported (IE 8) */
+    color: rgba(0, 0, 0, 0.80); /* rgba supported */
+    border: 1px solid #999;  /*IE 6/7/8*/
+    border: none rgba(0, 0, 0, 0);  /*IE9 + everything else*/
+    background-color: #E6E6E6;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+.pure-button-hover,
+.pure-button:hover,
+.pure-button:focus {
+    background-image: linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
+}
+.pure-button:focus {
+    outline: 0;
+}
+.pure-button-active,
+.pure-button:active {
+    box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
+    border-color: #000\9;
+}
+
+.pure-button[disabled],
+.pure-button-disabled,
+.pure-button-disabled:hover,
+.pure-button-disabled:focus,
+.pure-button-disabled:active {
+    border: none;
+    background-image: none;
+    /* csslint ignore:start */
+    filter: alpha(opacity=40);
+    /* csslint ignore:end */
+    opacity: 0.40;
+    cursor: not-allowed;
+    box-shadow: none;
+    pointer-events: none;
+}
+
+.pure-button-hidden {
+    display: none;
+}
+
+.pure-button-primary,
+.pure-button-selected,
+a.pure-button-primary,
+a.pure-button-selected {
+    background-color: rgb(0, 120, 231);
+    color: #fff;
+}
+
+/* Button Groups */
+.pure-button-group .pure-button {
+    margin: 0;
+    border-radius: 0;
+    border-right: 1px solid #111;  /* fallback color for rgba() for IE7/8 */
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+
+}
+
+.pure-button-group .pure-button:first-child {
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+.pure-button-group .pure-button:last-child {
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-right: none;
+}
+
+/*自訂 css 開始*/
+html, body{
+	font-family: MicrosoftJhengHeiRegular, 微軟正黑體;
+}
+.wrap{
+	max-width: 1024px;
+	margin: 0 auto;
+	background-color: #efe9e7;
+}
+
+/*css setting of .header*/
+.header{
+	background-image: url(../image/header_desktop.png);
+	background-position: 50% 50%;
+	height: 420px;
+	color: #ffffff;
+}
+.logo-menu{
+	background: rgba(0,0,0,0.75);
+	position: relative;
+}
+.logo-menu h1 a{
+	float: left;
+	display: block;
+	width: 120px;
+	height: 24px;
+	background-image: url("../image/logo_w(null).svg");
+	background-repeat: no-repeat;
+	white-space: nowrap;
+	text-indent: 120%;
+	overflow: hidden;
+	margin: 16px 42px;
+}
+.logo-menu ul{
+	float: right;
+	margin-right: 25px;
+}
+.logo-menu li{
+	float: left;	
+}
+.logo-menu li a{
+	display: block;
+	padding: 20px 15px;
+	color: #ffffff;	
+}
+.logo-menu ul a:hover, .logo-menu ul a:active{
+	background-image: linear-gradient(transparent, rgba(255,255,255, 0.05) 10%, rgba(255,255,255, 0.50));
+}
+.clearfix:after{
+	content: '';
+	display: table;
+	clear: both;
+}
+
+/*hamburger meun setting*/
+.hamburger-menu-area{
+	display: none;
+  position: absolute;
+  top: 0px;  
+  right: 0;
+  width: 94px;
+  height: 56px;
+}
+.hamburger-menu{
+  position: absolute;
+  top: 6px;  
+  right: 7px;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+}
+	/*給bar本身與偽元素設定寬高*/
+.bar,
+.bar:after,
+.bar:before{
+  width: 22px;
+  height: 4px;
+}
+	/*設定bar相對位置，繪製中間一條線*/
+.bar{
+  position: relative;
+  top: 20px;
+  left: 11px;
+  background-color: rgba(255, 255, 255, 1);
+  transition: all 0.1s;
+}
+  /*before設定bottom距離25px，會往下繪製一條線  */
+.bar:before{
+  content: "";
+  background-color: rgba(255, 255, 255, 1);
+  position: absolute;
+  left: 0;
+  bottom: 8px;
+  transition: bottom .1s .1s cubic-bezier(0.23, 1, 0.32, 1), transform .1s cubic-bezier(0.23, 1, 0.32, 1);
+}
+  /*after設定top距離25px，會往上繪製一條線*/
+.bar:after{
+  content: "";
+  background-color: rgba(255, 255, 255, 1);
+  position: absolute;
+  left: 0;
+  top: 8px;
+  transition: top .1s .1s cubic-bezier(0.23, 1, 0.32, 1), transform .1s cubic-bezier(0.23, 1, 0.32, 1);
+}
+  /*當點擊menu，bar中間那條線設為透明，並增加animate class*/
+.bar.animate{
+  background-color: rgba(255, 255, 255, 0);
+}
+  /*before傾斜-45度*/
+.bar.animate:before{
+  bottom: 0;
+  transform: rotate(-45deg);
+  transition: bottom .1s cubic-bezier(0.23, 1, 0.32, 1), transform .1s .1s cubic-bezier(0.23, 1, 0.32, 1);
+}
+ /*after傾斜45度*/
+.bar.animate:after{
+  top: 0;
+  transform: rotate(45deg);
+  transition: top .1s cubic-bezier(0.23, 1, 0.32, 1), transform .1s .1s cubic-bezier(0.23, 1, 0.32, 1);
+} 
+
+
+.slogan{
+	width: 460px;
+	height: 152px;
+	background: rgba(0,0,0,0.35);
+	margin: 67px auto;
+	text-align: center;
+}
+.slogan h2{
+	font-size: 36px;
+	line-height: 48px;
+	padding-top: 20px;
+}
+.slogan p{
+	margin-top: 16px;
+	line-height: 21px;
+}
+
+/*css setting of .header on max-width=768px (iPad 直式)*/
+@media (max-width: 768px){
+	.header{
+		background-position: 55% 50%;
+	}
+	.logo-menu h1 a{
+		margin: 16px 13px;
+	}
+	.logo-menu ul{
+		margin-right: 6px;			
+	}
+}
+/*css setting of .header on max-width=767px*/
+@media (max-width: 767px){
+	.hamburger-menu-area{
+		display: block;
+	}
+	.hamburger-menu-area.active-bg-c{
+		background: rgb(100,100,100);
+	}
+	.logo-menu ul{
+		float: none;
+		margin-right: 0;
+		position: absolute;
+		top: 56px;
+		right: 0;	
+		background: rgb(100,100,100);
+		height: 0;
+		overflow: hidden;
+	}
+	.logo-menu ul.active{
+		height: 168px;
+		transition: ease .2s;
+	}
+	.logo-menu li{
+		float: none;
+	}
+	.logo-menu li a{
+		text-align: center;
+	}
+	.slogan{
+		width: 300px;
+		height: 194px;
+		margin: 57px auto;
+	}
+	.slogan span{
+		display: block;
+	}
+}
+/*css setting of .header on max-width=414px (iPhone678 plus 直式)*/
+@media (max-width: 414px){
+	.header{
+		background-image: url(../image/header_mobile.png);
+		background-position: 50% 50%;
+	}
+}
+
+
+/*css setting of .feature*/
+.feature{
+	text-align: center;
+	color: #3D1101;
+	padding: 50px 0;
+}
+.title-line{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 508px;
+	margin: 0 auto 30px auto;	
+}
+.title-line hr{
+	display: inline-block;
+	width: 118px;
+	border: 0.5px solid #979797;
+	margin: 0 12px;
+}
+.title-line h2{
+	display: inline-block;
+	width: 200px;
+	font-size: 20px;
+	line-height: 32px;
+}
+.feature ul{
+	width: 95%;
+	margin: 0 auto;
+	background-color: #efe9e7;
+}
+.feature li{
+	width: 27.33333%;
+	margin: 0 3%;
+	float: left;
+}
+.feature li h3{
+	font-size: 18px;
+	margin: 20px 0 11px 0;
+	line-height: 24px;
+}
+.feature li p{
+	text-align: left;
+	line-height: 21px;
+}
+
+/*css setting of .feature on max-width=768px (iPad 直式)*/
+@media (max-width: 768px){
+	.feature ul{
+		width: 99%;
+	}
+}
+/*css setting of .feature on max-width=767px*/
+@media (max-width: 767px){
+	.feature{
+		padding: 50px 0 20px 0;
+	}
+	.feature li{
+		width: 88%;
+		margin: 0 6% 30px 6%;
+		float: none;
+	}
+}
+/*css setting of .feature on max-width=667px (iPhone678 橫式)*/
+@media (max-width: 667px){
+	.title-line hr{
+		width: 59px;
+	}
+}
+/*css setting of .feature on max-width=568px (iPhone5 橫式)*/
+@media (max-width: 568px){
+	.title-line{
+		width: 100%;
+	}
+}
+/*css setting of .feature on max-width=414px (iPhone678 plus 直式)*/
+@media (max-width: 414px){
+	.title-line hr{
+		display: none;
+	}
+}
+/*css setting of .feature on max-width=375px (iPhone678 直式)*/
+@media (max-width: 375px){
+	.feature li{
+		width: 94%;
+		margin: 0 3% 30px 3%;
+	}
+}
+
+
+/*css setting of .today-chef*/
+.today-chef{
+	background-color: #3D1101;
+	padding: 0 4.1%;
+	display: flex;
+	color: #EFE9E7;
+}
+.chef-img{
+	width: 50%;
+	background-image: url(../image/main_chef_brown.png);
+	background-position: 100% 50%;
+	background-repeat: no-repeat;
+}
+.chef{
+	width: 50%;
+	margin: 80px 0;
+	padding-left: 25px;
+}
+.chef h2{
+	font-size: 20px;
+	line-height: 32px;
+}
+.chef p{
+	line-height: 21px;
+	max-width: 410px;
+}
+.chef-en{
+	margin-bottom: 16px;
+}
+
+/*css setting of .today-chef on max-width=768px (iPad 直式)*/
+@media (max-width: 768px){
+	.today-chef{
+		padding: 0 1.5%;
+	}
+	.chef-img{
+		width: 50%;
+	}
+	.chef{
+		width: 47.7%;
+		margin: 48px 2.3% 48px 0;
+	}
+}
+/*css setting of .today-chef on max-width=767px*/
+@media (max-width: 767px){
+	.today-chef{
+		padding: 0 1%;
+	}
+	.chef-img{
+		width: 50.2%;
+	}
+	.chef{
+		width: 48.8%;
+		margin: 48px 1% 48px 0;
+	}
+}
+/*css setting of .today-chef on max-width=667px (iPhone678 橫式)*/
+@media (max-width: 667px){
+	.today-chef{
+		display: block;
+		padding: 0 0 30px 0;
+	}
+	.chef-img{
+		width: 100%;
+		height: 460px;
+		background-position: 50% 50%;
+		margin-bottom: 30px;
+	}
+	.chef{
+		width: 70%;
+		margin: 0 auto;
+		padding-left: 0px;
+	}
+}
+/*css setting of .today-chef on max-width=568px (iPhone5 橫式)*/
+@media (max-width: 568px){
+	.chef{
+		width: 80%;
+	}
+}
+/*css setting of .today-chef on max-width=414px (iPhone678 plus 直式)*/
+@media (max-width: 414px){
+	.chef-img{
+		background-position: 100% 50%;
+	}
+	.chef{
+		width: 100%;
+		margin: 0;
+		padding: 0 30px;
+	}
+}
+
+
+/*css setting of .impression*/
+.impression{
+	padding: 50px 0;
+	color: #3D1101;
+}
+.impression h2{
+	font-size: 24px;
+	margin-bottom: 32px;
+	text-align: center;
+}
+.impression ul{
+	margin: 0 3%;
+	display: flex;
+}
+.impression ul li{
+	display: flex;
+	width: 33.33333%;
+	padding: 0 1%;
+}
+.impression li img{
+	height: 67px;
+	margin-right: 13px;
+}
+.impression li h3{
+	font-size: 18px;
+	line-height: 24px;
+	margin: 20px 0 22px 0;
+}
+.impression li p{
+	line-height: 24px;
+}
+.title{
+	margin-top: 16px;
+	text-align: right;
+}
+
+/*css setting of .impression on max-width=768px (iPad 直式)*/
+@media (max-width: 768px){
+	.impression ul{
+		margin: 0 1%;
+	}
+}
+/*css setting of .impression on max-width=767px*/
+@media (max-width: 767px){
+	.impression ul{
+		display: block;
+	}
+	.impression ul li{
+		width: 60%;
+		margin: 0 auto;
+	}
+}
+/*css setting of .impression on max-width=568px (iPhone5 橫式)*/
+@media (max-width: 568px){
+	.impression ul li{
+		width: 80%;
+		margin: 0 auto;
+	}
+}
+/*css setting of .impression on max-width=414px (iPhone678 plus 直式)*/
+@media (max-width: 414px){
+	.impression ul li{
+		width: 100%;
+		margin: 0;
+		padding: 0 10px;
+	}
+}
+
+
+/*css setting of .map-booking*/
+.map-booking{
+	background-color: #f6f4f3;
+	padding: 50px 3%;
+	color: #3D1101;
+}
+.map-booking h2{
+	font-size: 24px;
+	text-align: center;
+	margin-bottom: 38px;
+}
+.map-booking .map-booking-flex{
+	display: flex;
+}
+.map-booking .img-map{
+	width: 48%;
+	margin: 0 1%;
+	background-image: url(../image/Map.png);
+	background-repeat: no-repeat;
+	background-position: 0 50%;
+}
+.map-booking form{
+	width: 50%;
+	padding: 0 1%;
+	font-family: PingFangTC-Light, MicrosoftJhengHeiRegular, 微軟正黑體;
+}
+.map-booking form label{
+	display: block;
+	font-size: 14px;
+	line-height: 20px;
+	margin-bottom: 6px;
+}
+#name, #tel, #mail, #number{
+	width: 100%;
+	height: 32px;
+	background: #FFFFFF;
+	border: 1px solid #CCCCCC;
+	box-shadow: inset 0px 1px 0px 0px #ECECEC;
+	border-radius: 3px;
+	margin-bottom: 12px;
+	padding-left: 14px;
+	font-size: 16px;
+	font-family: PingFangTC-Light, MicrosoftJhengHeiRegular, 微軟正黑體;
+}
+#name:focus, #tel:focus, #mail:focus, #number:focus{
+	box-shadow: 3px 3px 6px #5a2101;
+}
+
+	/*<input placeholder="">修改文字顏色*/
+.map-booking input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #4a4a4a;
+}
+.map-booking input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #4a4a4a;
+   opacity:  1;
+}
+.map-booking input::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #4a4a4a;
+   opacity:  1;
+}
+.map-booking input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #4a4a4a;
+}
+.map-booking input::-ms-input-placeholder { /* Microsoft Edge */
+   color:    #4a4a4a;
+}
+.map-booking input::placeholder { /* Most modern browsers support this now. */
+   color:    #4a4a4a;
+}
+
+	/*<input type="radio">修改按鈕顏色*/
+.map-booking .radio-option{
+  display: inline-block;
+  position: relative;
+	font-size: 14px;
+	margin-bottom: 22px;
+}
+.map-booking .radio-option input{
+	display: none;
+}
+.map-booking .radio-option label:after{
+	content: " ";
+  display: inline-block;
+  position: relative;
+  top: 2px;
+  margin: 0 31px 0 6px;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  border: 1px solid #9b9b9b;
+  background-color: transparent;
+}
+.map-booking .radio-option input[type="radio"]:checked + label:after{
+	border: 1px solid #4a90e2;
+}
+.map-booking .radio-option input[type="radio"]:checked + label:before{
+  border-radius: 4px;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  top: 6px;
+  left: 24px;
+  content: " ";
+  display: block;
+  background: #4a90e2;
+}
+.map-booking .submit{
+	text-align: right;
+}
+.map-booking .submit input{
+	width: 70px;
+	height: 32px;
+	font-size: 14px;
+	color: #FFFFFF;
+	margin-left: 11px;
+	border-radius: 3px;
+}
+.map-booking .cancel{
+	background: rgba(0,0,0,0.35);
+	border-radius: 3px;
+}
+.map-booking .deliver{
+	background: #F56C23;
+	border-radius: 3px;
+}
+/*.pure-button:hover{
+    background-image: linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.50));
+}
+.pure-button:active{
+    box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 12px rgba(0,0,0, 0.80) inset;
+}*/
+.map-booking .cancel:hover,
+.map-booking .deliver:hover{
+    background-image: linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.50));
+}
+.map-booking .cancel:active,
+.map-booking .deliver:active{
+    box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 12px rgba(0,0,0, 0.80) inset;
+}
+
+/*css setting of .map-booking on max-width=768px (iPad 直式)*/
+@media (max-width: 768px){
+	.map-booking{
+		padding: 50px 1%;
+	}
+	.map-booking .cancel:hover{
+	background: rgba(0,0,0,0.35);
+	border-radius: 3px;
+	}
+	.map-booking .deliver:hover{
+		background: #F56C23;
+		border-radius: 3px;
+	}
+}
+/*css setting of .map-booking on max-width=667px (iPhone678 橫式)*/
+@media (max-width: 667px){
+	.map-booking .map-booking-flex{
+		display: block;
+	}
+	.map-booking .img-map{
+		width: 100%;
+		height: 388px;
+		margin: 0 0 30px 0;
+		background-position: 50% 50%;
+	}
+	.map-booking form{
+		width: 300px;
+		padding: 0;
+		margin: 0 auto;
+	}
+}
+/*css setting of .map-booking on max-width=414px (iPhone678 plus 直式)*/
+@media (max-width: 414px){
+	.map-booking .img-map{
+		width: 90%;
+		height: 388px;
+		margin: 0 5% 30px 5%;
+		background-position: 40% 50%;
+	}
+}
+/*css setting of .map-booking on max-width=375px (iPhone678 直式)*/
+@media (max-width: 375px){
+	
+}
+/*css setting of .map-booking on max-width=320px*/
+@media (max-width: 320px){
+	
+}
+
+
+/*css setting of footer*/
+.footer{
+	color: #3D1101;
+	padding: 50px 3%;
+}
+.footer .about{
+	float: left;
+	width: 33.33333%;
+	padding: 0 1%;
+}
+.footer .about h2{
+	font-size: 24px;
+	line-height: 32px;
+	margin-bottom: 16px;
+}
+.footer .contact{
+	float: left;
+	width: 33.33333%;
+	padding: 0 1%;
+}
+.footer .contact h2{
+	font-size: 24px;
+	line-height: 32px;
+	margin-bottom: 16px;
+}
+.footer .community{
+	float: right;
+	width: 33.33333%;
+	padding: 0 1%;
+	text-align: right;
+}
+.footer .community h2 a{
+	float: right;
+	display: block;
+	width: 243px;
+	height: 48px;
+	background-image: url("../image/logo_l(null).svg");
+	background-repeat: no-repeat;
+	text-indent: 120%;
+	overflow: hidden;
+	white-space: nowrap;
+	margin: 0 0 22px 0;
+}
+.footer p, .footer li{
+	line-height: 21px;
+}
+.footer .community .google{
+	display: inline-block;
+	font-size: 36px;
+	color: #DB4437;
+	margin-right: 12px;	
+}
+.footer .community .google:hover,
+.footer .community .google:active{
+	box-shadow: 5px 0 5px;
+}
+.footer .community .twitter{
+	display: inline-block;
+	font-size: 36px;
+	color: #41ABE1;
+	margin-right: 11px;
+}
+.footer .community .twitter:hover,
+.footer .community .twitter:active{
+	box-shadow: 5px 0 5px;
+}
+.footer .community .facebook{
+	display: inline-block;
+	font-size: 36px;
+	color: #3A5795;
+}
+.footer .community .facebook:hover,
+.footer .community .facebook:active{
+	box-shadow: 5px 0 5px;
+}
+
+/*css setting of .footer on max-width=768px (iPad 直式)*/
+@media (max-width: 768px){
+	.footer{
+		padding: 50px 1%;
+	}
+	.footer .community .google:hover,
+	.footer .community .twitter:hover,
+	.footer .community .facebook:hover{
+		box-shadow: 0 0 0;
+	}
+	.footer .community .google:active,
+	.footer .community .twitter:active,
+	.footer .community .facebook:active{
+		box-shadow: 5px 0 5px;
+	}
+}
+/*css setting of .footer on max-width=667px (iPhone678 橫式)*/
+@media (max-width: 667px){
+	.footer .about{
+		display: none;
+	}
+	.footer .contact{
+		width: 50%;
+		padding: 0 5%;
+	}
+	.footer .community{
+		width: 50%;
+		padding: 0 5%;
+	}
+}
+/*css setting of .footer on max-width=568px (iPhone5 橫式)*/
+@media (max-width: 568px){
+	.footer .contact{
+		float: none;
+		width: 80%;
+		margin: 0 auto;
+		padding-bottom: 30px;
+	}
+	.footer .community{
+		float: none;
+		width: 80%;
+		margin: 0 auto;
+	}
+}
